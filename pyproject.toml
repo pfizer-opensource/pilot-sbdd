@@ -1,0 +1,86 @@
+[build-system]
+requires = [
+  "setuptools >= 64",
+  "setuptools_scm[toml]>=6.2",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "e3mol"
+dynamic = ["version"]
+dependencies = [
+  "numpy",
+  "hydra-core",
+  "torch_geometric == 2.4.0",  
+  "torch-scatter", # cpu installation by default
+  "torch-sparse",  # cpu installation by default
+  "torch-cluster",  # cpu installation by default
+]
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+    "pytest >=6",
+    "pytest-cov",
+    "mypy",
+    "black",
+
+  ]
+test = [
+    "pre-commit",
+    "pytest >=6",
+    "pytest-cov",
+    "mypy",
+  ]
+
+[tool.setuptools]
+packages = ["e3mol"]
+
+[tool.setuptools_scm]
+write_to = "e3mol/_version.py"
+version_scheme = "post-release"
+
+[tool.pytest.ini_options]
+addopts = ["--import-mode=importlib","-v"]
+
+[tool.coverage.run]
+source = ["e3mol"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "pragma: no cover",
+  "raise NotImplementedError",
+  "if TYPE_CHECKING:",
+  "if MYPY:",
+]
+
+[tool.mypy]
+python_version = "3.10"
+warn_redundant_casts = true
+warn_return_any = true
+warn_unused_configs = true
+warn_unused_ignores = false
+exclude = "tests|examples|benchmark"
+explicit_package_bases = true
+
+[tool.black]
+target-version = ['py310']
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+      \.eggs
+    | \.git
+    | \.mypy_cache
+    | \.venv
+    | venv.*
+    | build
+    | dist
+    | ci
+  )/
+)
+'''
+
+[tool.isort]
+profile = "black"
+py_version = "310"

@@ -1,0 +1,32 @@
+name: pilot-sbdd
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
+  - oddt
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - rdkit=2023.9.3
+  - jupyter
+  - biopython=1.85
+  - biopandas=0.5.1
+  - openbabel
+  - pyarrow
+  - pytorch::pytorch=2.3.0
+  - pytorch::pytorch-cuda=11.8
+  - pytorch-lightning=2.4
+  - oddt:oddt
+  - pip:
+    - ase
+    - py3Dmol
+    - torch-ema
+    - tensorboard
+    - lmdb
+    - datamol
+    - posecheck
+    - posebusters
