@@ -3,7 +3,7 @@ Official implementation of the pre-print "Coupled Fragment-Based Generative Mode
 
 
 ## Installation
-
+We use mamba as python packaging manager. Best installed with the [Miniforge distribution](https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html).
 ```
 # clone the repository and cd directory to install
 git clone git@github.com:pfizer-opensource/pilot-sbdd.git && cd pilot-sbdd
