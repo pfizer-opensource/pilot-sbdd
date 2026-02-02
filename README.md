@@ -5,12 +5,14 @@ Official implementation of the pre-print "Coupled Fragment-Based Generative Mode
 ## Installation
 
 ```
+# clone the repository and cd directory to install
+git clone git@github.com:pfizer-opensource/pilot-sbdd.git && cd pilot-sbdd
 mamba env create -f environment.yaml
 mamba activate pilot-sbdd
 pip install torch_geometric==2.4.0
 pip install torch_scatter torch_sparse torch_cluster -f https://data.pyg.org/whl/torch-2.3.0+cu118.html
 pip install -e .
-pip install git+https://github.com/PatWalters/useful_rdkit_utils
+pip install useful_rdkit_utils
 ```
 
 Please check if the CUDA versions of pytorch and torch_geometric are correctly installed. On a compute node with GPU, test the following:
@@ -27,6 +29,19 @@ python -c "import torch; import torch_geometric; print(torch.cuda.is_available()
 ## Publicly available datasets used in this study
 - CrossDocked2020
 - KinoData3d  
+
+The paths will decompress into 
+```
+datasets/
+└── crossdocked2020/
+    ├── raw/
+    ├── processed/
+    ├── test/
+└── kinodata3d/
+    ├── raw/
+    ├── processed/
+    ├── test/
+```
 
 Datasets can be downloaded here: https://figshare.com/articles/dataset/Datasets_including_CrossDocked2020_and_KinoData-3D/30739232?file=59947856
 
@@ -131,3 +146,6 @@ This repository is a refactored and extended version of the following repository
 https://github.com/pfizer-opensource/e3moldiffusion.
 
 The changes mainly include the code implementation of the flow matching and extending the learning to conditional fragment learning by leveraging fragmentation algorithm to obtain fixed/variable masks.
+
+## Contact
+Should you face installation issues or have any other questions, feel free to contact via email  tuan.le@pfizer.com
