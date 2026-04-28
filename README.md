@@ -1,5 +1,8 @@
 # Coupled Fragment-Based Generative Modeling with Stochastic Interpolants
-Official implementation of the pre-print "Coupled Fragment-Based Generative Modeling with Stochastic Interpolants" by Tuan Le, Yanfei Guan, Djork-Arné Clevert and Kristof T. Schütt.
+
+[![Digital Discovery](https://img.shields.io/badge/Digital%20Discovery-10.1039%2FD5DD00535C-blue)](https://doi.org/10.1039/D5DD00535C)
+
+Official implementation of "Coupled Fragment-Based Generative Modeling with Stochastic Interpolants" by Tuan Le, Yanfei Guan, Djork-Arné Clevert and Kristof T. Schütt, published in *Digital Discovery* (2026).
 
 
 ## Installation
@@ -114,12 +117,17 @@ Both checkpoints can be used for de-novo generation of fragment/core replacement
 If you make use of this repository, please consider citing the following works
 
 ```
-@UNPUBLISHED{Le2025-re,
-title    = "Coupled fragment-based generative modeling with stochastic interpolants",
-author   = "Le, Tuan and Guan, Yanfei and Clevert, Djork-Arné and Schütt, Kristof T",
-journal  = "ChemRxiv",
-month    =  oct,
-year     =  2025
+@Article{D5DD00535C,
+  author    = "Le, Tuan and Guan, Yanfei and Clevert, Djork-Arné and Schütt, Kristof T.",
+  title     = "Coupled fragment-based generative modeling with stochastic interpolants",
+  journal   = "Digital Discovery",
+  year      = "2026",
+  volume    = "5",
+  issue     = "4",
+  pages     = "1600-1612",
+  publisher = "RSC",
+  doi       = "10.1039/D5DD00535C",
+  url       = "http://dx.doi.org/10.1039/D5DD00535C"
 }
 ```
 
